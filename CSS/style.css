@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #222;
+    width: 80vw;
+    padding: 30px;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    gap: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+label {
+    font-weight: 700;
+}
+
+.img img, canvas {
+    max-width: 45vw;
+    max-height: 60vh;
+    margin-top: 20px;
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload input{
+    display: none;
+}
+
+.upload .dark-upload {
+    font-size: 24px;
+    color: #fff;
+    padding: 8px 20px;
+    border: 3px #fff dashed;
+    cursor: pointer;
+}
+
+.filters {
+    direction: rtl;
+}
+
+.filters ul,
+.filters ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.filters ul li label {
+    color: white;
+}
+
+.filters ul li:last-child {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.filters ul li a, span {
+    display: inline-block;
+    background-color: #060;
+    font-size: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+
+/* Responsive Part */
+
+@media screen and (max-width: 650px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .img img, canvas {
+        max-width: 80vw;
+        margin-top: 50px;
+    }
+}
+
+
+/* output {
+    color: #fff;
+    display: inline-block;
+} */
+
+.img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.img .mood {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.img .mood .fa-sun{
+    color: #ffa700;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    padding: 5px;
+}
+
+.img .mood .fa-sun:hover, .fa-moon:hover {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.img .mood .fa-moon{
+    color: #FEFCD7;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    padding: 5px 8px;
+}
+
+
+.img .mood .fa-sun:hover {
+    background-color: #FEFCD7;
+}
+.img .mood .fa-moon:hover {
+    background-color: #ffa700;
+}
+.light-mood {
+    background-color: #fbfbfb;
+    -webkit-box-shadow: -2px 2px 42px -5px rgba(186,186,186,0.8);
+    -moz-box-shadow: -2px 2px 42px -5px rgba(186,186,186,0.8);
+    box-shadow: -2px 2px 42px -5px rgba(186,186,186,0.8);
+}
+
+.light-filters ul li label {
+    color: black;
+}
+
+.light-upload{
+    border: 3px #000 dashed;
+    font-size: 24px;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.filters ul li a:hover, span:hover {
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+} 
